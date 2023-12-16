@@ -1,0 +1,101 @@
+/* code cấu hình chung */
+:root {
+    --primary-color: #00b14f;
+    --white-color: #fff;
+    --black-color: #000;
+    --text-color: #333;
+
+    --header-height: 120px;
+    --navbar-height: 32px;
+    --header-with-search-height: calc(var(--header-height) - var(--navbar-height));
+}
+
+* {
+    box-sizing: inherit; /* kế thừa từ thẻ chứa nó , box-sizing : bao gồm các margin, padding trong phần tử*/
+}
+
+html {
+    font-size: 62.5%;
+    line-height: 1.6 rem;
+    box-sizing: border-box;
+    font-family: cursive;
+}
+
+.grid {
+    width: 1200px;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.grid__full-width {
+    width: 100%;
+}
+
+.grid__row {
+    display: flex;
+    flex-wrap: wrap; /* độ dài vượt quá màn hình tự động xuống hàng*/
+    margin-left: -5px;
+    margin-right: -5px;
+}
+
+.grid__column-2{
+    padding-left: 5px;
+    padding-right: 5px;
+    width: 16.6667%;
+}
+
+.grid__column-2-4{
+    padding-left: 5px;
+    padding-right: 5px;
+    width: 20%;
+}
+
+.grid__column-10{
+    padding-left: 5px;
+    padding-right: 5px;
+    width: 83.3334%;
+}
+
+/* Selection */
+
+
+.select-input:hover .select-input__list{
+    display: block;
+}
+
+.select-input__label{
+    font-size: 1.4rem;
+}
+
+.select-input__icon{
+    font-size: 1.4rem;
+    color: rgb(131, 131, 131);
+    position: relative;
+    top: 1px;
+    cursor: pointer;
+}
+
+.select-input__list{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 25px;
+    border-radius: 2px;
+    background-color: var(--white-color);
+    padding: 8px 16px;
+    list-style: none;
+    display: none;
+}
+
+.select-input__link {
+    font-size: 1.4rem;
+    color: var(--text-color);
+    text-decoration: none;
+    display: block;
+    padding: 4px 0;
+}
+
+.select-input__link:hover {
+    color: var(--primary-color);
+    cursor: pointer;
+}
